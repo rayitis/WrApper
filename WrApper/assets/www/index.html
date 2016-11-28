@@ -36,19 +36,15 @@
         <title>WrApper</title>
     </head>
 
-
-
     <body>
 
         <div class="app">
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <p class="event listening">Initilizing WrApper</p>
+                <p class="event received">WrApper is Ready</p>
             </div>
         </div>
         <div class="app">
-
-
                 <button id = "getHTML" style="visibility:hidden">Get HTML</button><br>
                 <button id = "storeHTML" style="visibility:hidden">Store HTML in storage</button><br>
                 <button id = "pullHTML" style="visibility:hidden">Pull HTML from storage</button><br>
@@ -65,7 +61,7 @@
                         <option>option 2</option>
                     </select>
                     -->
-                    <textarea id = "htmllocation" rows="5" cols="35" style="background-color:lightgray">http://192.168.1.28/raytest/testHtmlGet2.html</textarea>
+                    <textarea id = "htmllocation" rows="5" cols="35" style="background-color:lightgray">http://192.168.1.28/example/testHtmlGet.html</textarea>
                     <br><br>
                     <button id = "submit">   Get it   </button>
                     <br><br>
@@ -76,9 +72,9 @@
                                 strArray = viewHtmlHist();
                                 strArrayLength = strArray.length;
                                 for(x=0; x!=strArrayLength; x++) {
-                                    document.write("<tr><td><button id=submitfromhist"+x+">load -></button></td><td><input type=text readonly id=htmllocation"+x+" value="+strArray[x]+" size=30></td></tr>");
+                                    document.write("<tr><td><button id=submitfromhist"+x+">load -></button></td><td><input type=text readonly id=htmllocation"+x+" size=30 value="+strArray[x]+"></td></tr>");
                                 }
-                                //document.write(viewHtmlHist());
+
                             </script>
 
                     </table>

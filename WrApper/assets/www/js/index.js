@@ -140,6 +140,9 @@ function viewHtmlHist(ctr) {
     var theHtmlHistList = [];
     for(y=0; y!=theHtmlHist.length; y++) {
         theHtmlHistList[y] = localStorage.getItem(theHtmlHist[y]);
+        if(theHtmlHistList[y]=="null" || theHtmlHistList[y]==null) {//check if null
+            theHtmlHistList[y]=" ";
+        }
     }
     return theHtmlHistList;
 }
